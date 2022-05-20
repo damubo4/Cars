@@ -1,0 +1,30 @@
+<div>
+    <div class="container">
+        <h2 class="text-center mb-5">CAR MODELS</h2>
+        <div class="float-end">
+            <span> <strong>Search: </strong> </span>
+            <input name="filterCar" class="" type="text" placeholder="Car Brand" [(ngModel)]="filterCar">
+        </div><br>
+        <div class="row mt-5">
+            <div *ngFor="let car of listCars" class="col-lg-4">
+                <div class="card mb-4 container" style="width: 18rem;">
+                    <img [src]="car.url_photo" class="card-img" alt="...">
+                    <div class="card-body">
+                      <h5 class="text-center card-title">{{ car.brand }}</h5>
+                      <div>
+                        <span class="card-text"><strong>Model: </strong>{{ car.model }}</span>
+                      </div>
+                      <div>
+                        <span> <strong>Year: </strong>  {{ car.year }}</span>
+                      </div>
+                      <div>
+                        <span> <strong>${{ car.price }}</strong> /day</span>
+                      </div>
+                      <div class="">
+                        <button routerLink="car/{{ car.id }}" class="btn button-card w-100">More Info</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>

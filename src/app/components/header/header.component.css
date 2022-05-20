@@ -1,0 +1,9 @@
+.image-header {
+    width: 100vw;
+    height: 100vh;
+}
+
+.text-header {
+    color: rgb(216, 216, 216);
+    text-align: center;
+}
