@@ -1,1 +1,34 @@
-<p>car works!</p>
+<div class="mb-5 mx-3">
+    <h2 class="text-center mb-4">CAR INFORMATION</h2>
+    <div class="card m-auto" style="max-width: 540px;">
+        <div class="p-0 container">
+          <div class="">
+            <img [src]="url_photo" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="">
+            <div class="card-body">
+                <h5 class="text-center card-title">{{ brand }}</h5>
+                <div>
+                  <span class="card-text"><strong>Model: </strong>{{ model }}</span>
+                </div>
+                <div>
+                  <span> <strong>Year: </strong>  {{ year }}</span>
+                </div>
+                <div>
+                  <span> <strong>Price: ${{ price }}</strong> /day</span>
+                </div>
+                <div class="mb-3">
+                    <span> <strong>Description: </strong>  {{ description }}</span>
+                </div>
+                <div class="mb-1">
+                    <button routerLink="/home/cars/" class="btn button-card w-100">Back</button>
+                </div>
+                <div class="">
+                    <button (click)="rentCar()" class="btn button-card w-100">Rent</button>
+                </div>               
+            </div>
+          </div>
+        </div>
+      </div>
+
+</div>

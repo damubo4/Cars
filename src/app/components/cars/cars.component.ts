@@ -19,8 +19,18 @@ export class CarsComponent implements OnInit {
 
   getCars(){
     this._carsService.getCars().subscribe(data => {
-      console.log(data);
-      this.listCars = data;
+      data.cars.sort((a: { brand: string; }, b: { brand: string; }) => {
+        if(a.brand < b.brand) {
+          return -1;
+        }
+        if(a.brand > b.brand) {
+          return 1;
+        }
+        return 0;
+      })
+      
+      
+      this.listCars = data.cars;
     })
   }
 

@@ -12,8 +12,8 @@ export class CarFilterPipe implements PipeTransform {
       if(car.brand.toLowerCase().indexOf(arg.toLowerCase()) > -1){
         resultCars.push(car);
       };
-      return resultCars;
     }
+    return resultCars;
   }
 
 }

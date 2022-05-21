@@ -13,10 +13,10 @@ import { CarsComponent } from './components/cars/cars.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarFilterPipe } from './pipes/car-filter.pipe';
 import { CarComponent } from './components/cars/car/car.component';
+import { PageComponent } from './components/page/page.component';
 
 @NgModule({
   declarations: [
@@ -24,10 +24,10 @@ import { CarComponent } from './components/cars/car/car.component';
     HeaderComponent,
     CarsComponent,
     FooterComponent,
-    NavBarComponent,
-    HomeComponent,    
+    NavBarComponent,    
     CarFilterPipe,
-    CarComponent
+    CarComponent,
+    PageComponent
   ],
   imports: [
     BrowserModule,

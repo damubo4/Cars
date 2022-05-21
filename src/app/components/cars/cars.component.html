@@ -1,13 +1,13 @@
-<div>
+
     <div class="container">
         <h2 class="text-center mb-5">CAR MODELS</h2>
-        <div class="float-end">
+        <div class="text-center">
             <span> <strong>Search: </strong> </span>
             <input name="filterCar" class="" type="text" placeholder="Car Brand" [(ngModel)]="filterCar">
         </div><br>
         <div class="row mt-5">
-            <div *ngFor="let car of listCars" class="col-lg-4">
-                <div class="card mb-4 container" style="width: 18rem;">
+            <div *ngFor="let car of listCars | carFilter:filterCar" class="col-lg-4 col-md-6">
+                <div class="card p-0 mb-4 container" style="width: 18rem;">
                     <img [src]="car.url_photo" class="card-img" alt="...">
                     <div class="card-body">
                       <h5 class="text-center card-title">{{ car.brand }}</h5>
@@ -17,11 +17,11 @@
                       <div>
                         <span> <strong>Year: </strong>  {{ car.year }}</span>
                       </div>
-                      <div>
+                      <div class="mb-3">
                         <span> <strong>${{ car.price }}</strong> /day</span>
                       </div>
                       <div class="">
-                        <button routerLink="car/{{ car.id }}" class="btn button-card w-100">More Info</button>
+                        <button routerLink="/home/cars/{{ car.id }}" class="btn button-card w-100">More Information</button>
                       </div>
                     </div>
                 </div>

@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
 import { CarComponent } from './components/cars/car/car.component';
 import { CarsComponent } from './components/cars/cars.component';
+import { PageComponent } from './components/page/page.component';
+import { HeaderComponent } from './components/header/header.component';
 
 const routes: Routes = [  
     { path:'', redirectTo: 'home', pathMatch: 'full' },
-    { path:'home', component: HomeComponent},      
-    { path:'home/car/:id', component: CarComponent },
-    { path:'**', component: CarsComponent }
+    { path:'home', component: HeaderComponent}, 
+    { path:'home/cars', component: PageComponent, children: [
+      { path:'', component: CarsComponent },
+      { path:':id', component: CarComponent },
+    ]},     
+    { path:'**', component: HeaderComponent }
 
     
   ] 

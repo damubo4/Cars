@@ -1,9 +1,19 @@
 .image-header {
-    width: 100vw;
+    object-fit: cover;   
     height: 100vh;
+    width: 100vw;
 }
 
 .text-header {
     color: rgb(216, 216, 216);
     text-align: center;
 }
+
+h1{
+    font-size: 4.5vw;
+}
+
+p{
+    font-size: 3.5vw;
+}
+
